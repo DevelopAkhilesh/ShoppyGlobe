@@ -42,15 +42,15 @@ const router = createBrowserRouter([
       element:<Suspense fallback = {<PageLoader/>}> <ProductList/> </Suspense>
     },
     {
-      path:"/product/:id",
+      path:"product/:id",
       element:<Suspense fallback={<PageLoader/>}><ProductDetail/></Suspense>
     },
     {
-      path:"/cart",
+      path:"cart",
       element:<Suspense fallback={<PageLoader/>}> <Cart/></Suspense>
     },
     {
-      path:"/checkout",
+      path:"checkout",
       element:<Suspense fallback={<PageLoader/>}><CheckOut/></Suspense>
     },
     {
