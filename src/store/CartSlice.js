@@ -11,11 +11,11 @@ const cartSlice = createSlice({
             let product = action.payload // getting the product from action.payload.
            let exsistingItems =  state.items.find((i)=>i.id===product.id) // find id the items that already exist
            if(exsistingItems){
-            exsistingItems.quatity +=1; // if exist increase the quantity by 1
+            exsistingItems.quantity +=1; // if exist increase the quantity by 1
             return
            }
 
-           state.items.push({...product,quatity:1}); // push the product with quantity 1
+           state.items.push({...product,quantity:1}); // push the product with quantity 1
 
         },
         // reducer which help us to remove the item from cart
@@ -27,7 +27,7 @@ const cartSlice = createSlice({
             const item = state.items.find((i)=>i.id===id); // find the item based on id
 
             if(item){
-                item.quatity = Math.max(1,item.quatity+amount); // increase the quantity by adding ammount to the quantity
+                item.quantity = Math.max(1,item.quantity+amount); // increase the quantity by adding ammount to the quantity
 
             }
 
@@ -44,9 +44,9 @@ export const {addToCart,removeFromCart,updateQuantity,clearCart} = cartSlice.act
 // it gives us the state of the items
 export const selectCartItem = (state)=> state.cart.items;
 // it gvies us the total count of the items based on quantity;
-export const selectCartCount = (state)=> state.cart.items.reduce((total,item)=> total+item.quatity,0);
+export const selectCartCount = (state)=> state.cart.items.reduce((total,item)=> total+item.quantity,0);
 // it gives us the total of price based on the item price
-export const selectCartTotal = (state)=> state.cart.items.reduce((total,item)=> total+(item.quatity*item.price),0);
+export const selectCartTotal = (state)=> state.cart.items.reduce((total,item)=> total+(item.quantity*item.price),0);
 // exporting the reducer
 export default cartSlice.reducer;
 
