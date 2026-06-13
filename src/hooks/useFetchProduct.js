@@ -7,7 +7,7 @@ const PRODUCTS_URL ='https://dummyjson.com/products'
 const useFetchProduct = ()=>{
 const [product,setProduct] = useState([]);
 const [error,setError] = useState("");
-const [loading,setLoading]=(true);
+const [loading,setLoading]=useState(true);
 
 
 // fetching the data from the api with the help of the useeffect;
@@ -22,10 +22,10 @@ useEffect(()=>{
                 throw new Error('Unable to load products. Please try again later.');
             }
             // convert the data into json format so you can read it.
-            const data =  await response.json;
+            const data =  await response.json();
             // if the component is mounted then put the data in the setProduct and seterror empty;
             if(isMounted){
-                setProduct(data||[]);
+                setProduct(data.products||[]);
                 setError("");
             }
 
