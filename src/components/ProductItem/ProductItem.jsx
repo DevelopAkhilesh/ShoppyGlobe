@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../store/CartSlice.js'
 import { Link } from 'react-router-dom'
+import "./ProductItem.css"
 
 const ProductItem = ({product}) => {
   console.log(product)
@@ -20,11 +21,13 @@ const ProductItem = ({product}) => {
       <div className="product-card__body">
         <h3 className="product-card__title">{product.title}</h3>
         <p className="product-card__category">{product.category}</p>
-        <p className=''>{product.rating}/5</p>
-        <p className="product-card__price">Rs{product.price.toFixed(2)}</p>
+        <p className='product-card__price'>{product.rating}/5</p>
+        <p className="product-card__price">Rs {product.price.toFixed(2)}</p>
 
         <div className="product-card__actions">
-          <Link to={`product/${product.id}`}>View Product</Link>
+          <Link to={`product/${product.id}`}
+            className  ="product-card__button product-card__button--outline">
+              View Product</Link>
           <button
             className="product-card__button product-card__button--solid"
             onClick={() => dispatch(addToCart(product))}
