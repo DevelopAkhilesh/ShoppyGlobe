@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useSelector ,useDispatch} from 'react-redux'
 import { selectCartCount } from '../../store/CartSlice.js'
 import { setSearchQuery } from '../../store/SearchSlice.js'
+import "./Header.css"
 
 
 const Header = () => {
