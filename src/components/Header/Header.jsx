@@ -16,6 +16,11 @@ const Header = () => {
        <div className="site-header__inner">
          <div className="site-header__logo">ShoppyGlobe</div>
          <div className="site-header__actions">
+          <div className="site-header__links">
+             <Link to ="/" className="site-header__link">Home</Link>
+          <Link to ="/checkout" className="site-header__link">Checkout</Link>
+          </div>
+         
            <input
             aria-label="Search products"
             className="site-header__search"
@@ -24,6 +29,8 @@ const Header = () => {
             type="search"
             value={query}
           />
+         
+
            <Link
             aria-label={`Shopping cart with ${cartCount} items`}
             className="site-header__cart"
