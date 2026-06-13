@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react'
 import { Link,useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../store/CartSlice.js'
-
+import "./ProductDetail.css"
 
 const ProductDetail = () => {
   const [product,setProduct] = useState(null); // for product storing
