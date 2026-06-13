@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useRouteError,useLocation } from 'react-router-dom'
+import "./NotFound.css"
 
 const NotFound = () => {
   const error= useRouteError(); // used for error messsage

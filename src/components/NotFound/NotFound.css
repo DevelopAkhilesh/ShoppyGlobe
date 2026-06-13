@@ -1,0 +1,52 @@
+.not-found {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 64px);
+  padding: 48px 20px;
+  text-align: center;
+}
+
+.not-found__code {
+  color: #eee;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 10px;
+}
+
+.not-found h1 {
+  color: #222;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.not-found__description,
+.not-found__details {
+  color: #666;
+  font-size: 13px;
+  margin: 0;
+}
+
+.not-found__details {
+  color: #888;
+  margin-top: 8px;
+}
+
+.not-found__button {
+  align-items: center;
+  background: #222;
+  border: 1px solid #222;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 700;
+  height: 40px;
+  justify-content: center;
+  margin-top: 22px;
+  padding: 0 22px;
+  text-decoration: none;
+}
