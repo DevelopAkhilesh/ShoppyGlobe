@@ -7,10 +7,10 @@ import "./ProductList.css"
 const ProductList = () => {
   const query = useSelector((state)=>state.search.query); // geting the search query
   const {product,error,loading} = useFetchProduct();// custom hook for fetching the data
-  console.log(product);
+  
   const filteredQuery = query.trim().toLowerCase(); // trim and lowercase the query
   const filteredProduct = product.filter((p)=>p.title.toLowerCase().includes(filteredQuery)) // filter the product based on search query
-
+ // function when you click on the shop now button this automatically scroll to all product
   function handleShopNow(){
     document.getElementById("products-heading")?.scrollIntoView({
       behavior:'smooth',

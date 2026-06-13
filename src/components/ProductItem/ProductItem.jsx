@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom'
 import "./ProductItem.css"
 
 const ProductItem = ({product}) => {
-  console.log(product)
- const dispatch = useDispatch();
+  
+ const dispatch = useDispatch(); // for dispatching the the add to card action 
   return (
     <article  className="product-card">
       <div className="product-card__image-wrap">
@@ -21,7 +21,7 @@ const ProductItem = ({product}) => {
       <div className="product-card__body">
         <h3 className="product-card__title">{product.title}</h3>
         <p className="product-card__category">{product.category}</p>
-        <p className='product-card__price'>{product.rating}/5</p>
+        <p className='product-card__price'>{product.rating} ⭐/5 ⭐</p>
         <p className="product-card__price">Rs {product.price.toFixed(2)}</p>
 
         <div className="product-card__actions">
@@ -40,7 +40,8 @@ const ProductItem = ({product}) => {
     </article>
   )
 }
-
+// for making sure only these type of the props we get from product
+// checking the type of the products
 ProductItem.propTypes = {
   product: PropTypes.shape({
     category: PropTypes.string.isRequired,
